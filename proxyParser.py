@@ -19,8 +19,7 @@ try:
             finProxy = {'http':'http://'+ip+':'+port, 'https':'http://'+ip+':'+port}
         proxies.append(finProxy)
 except Exception as e:
-    log('Error parsing proxies. Exiting')
-    log(str(e))
+    pass
 
 if len(proxies) != 0:
     log('Successfully loaded '+str(len(proxies))+' proxies from '+str(directory))
